@@ -1,6 +1,15 @@
 """
 Given a string, the task is to check if the string can be made palindrome by swapping a character only once.
 [NOTE: only one swap and only one character should be swapped with another character]
+
+Input : bbg
+Output : true
+
+Input : bdababd
+Output : true
+
+Input : gcagac
+Output : false
 """
 
 def displayMatrix(mat,n):
@@ -19,15 +28,15 @@ def checkPalindrome(str):
     for i in range(0,d):
         if (str[i] != str[n-i-1]):
             if (diffCount == 2):
-                print("Different Characters Count=",diffCount)
-                displayMatrix(diff,d)
+                #print("Different Characters Count=",diffCount)
+                #displayMatrix(diff,d)
                 return False
             diff[diffCount][0] = str[i]
             diff[diffCount][1] = str[n-i-1]
             diffCount+=1
 
-    print("Different Characters Count=",diffCount)
-    displayMatrix(diff,d)
+    #print("Different Characters Count=",diffCount)
+    #displayMatrix(diff,d)
 
     if (diffCount == 0):
         return True
